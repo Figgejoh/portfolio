@@ -7,15 +7,16 @@
 :root {
   --primary-font: "Poppins", serif;
   --secondary-font: "Playfair Display", serif;
-  --primary-color: #fbeecc;
-  --secondary-color: #17301a;
-  --detail-color: rgba(115, 209, 72, 0.2);
+  --primary-color: #eae7dc;
+  --secondary-color: #d8c3a5;
+  --detail-color: #e85a4f;
   --accent-color: #cf613c;
+  --font-color: #000;
 }
 
 body {
   overflow-x: hidden;
-  background-color: #222;
+  background-color: var(--primary-color);
 }
 
 html {
@@ -31,7 +32,8 @@ html {
   padding: 20px 50px;
   position: sticky;
   top: 0;
-  color: var(--secondary-color);
+  color: var(--detail-color);
+  background-color: var(--primary-color);
 }
 
 .header h2 {
@@ -53,7 +55,7 @@ html {
 
 a {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--detail-color);
 }
 
 a:hover {
@@ -71,7 +73,7 @@ a:hover {
 .hamburger span {
   height: 3px;
   width: 25px;
-  background-color: var(--secondary-color);
+  background-color: var(--detail-color);
   display: block;
   border-radius: 2px;
 }
@@ -85,7 +87,7 @@ a:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #fff;
+    background-color: var(--primary-color);
     flex-direction: column;
     width: 768px;
     display: none;
@@ -96,7 +98,7 @@ a:hover {
   }
 
   .nav-link:hover {
-    background-color: #999;
+    background-color: var(--primary-color);
     cursor: pointer;
   }
 
@@ -146,7 +148,7 @@ a:hover {
 }
 
 .hero {
-  /* background-color: #e0d9d9; */
+  background-color: var(--secondary-color);
   height: 600px;
   width: 100%;
   display: flex;
@@ -175,14 +177,14 @@ a:hover {
   font-size: clamp(34px, 2vw, 3rem);
   margin-bottom: 20px;
   font-family: var(--primary-font);
-  color: #fff;
+  color: var(--font-color);
 }
 
 .info h3 {
   font-size: clamp(24px, 1.4vw, 2rem);
   margin-bottom: 20px;
   font-family: var(--secondary-font);
-  color: #fff;
+  color: var(--font-color);
 }
 
 button {
@@ -208,7 +210,7 @@ p {
   font-size: 18px;
   border-radius: 7px;
   border: none;
-  background: var(--secondary-color);
+  background: var(--detail-color);
   color: #fff;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
@@ -247,7 +249,7 @@ p {
   text-align: center;
   padding: 10px 0px;
   margin-bottom: 20px;
-  color: #fff;
+  color: var(--font-color);
 }
 
 .about-me > p {
@@ -255,7 +257,8 @@ p {
   text-align: center;
   margin-bottom: 40px;
   font-size: 24px;
-  color: #fff;
+  color: var(--font-color);
+  font-weight: bold;
 }
 
 .card-wrapper {
@@ -269,7 +272,7 @@ p {
 
 .card {
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: var(--secondary-color);
   box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.4);
   max-width: 400px;
   min-height: 250px;
@@ -288,7 +291,7 @@ p {
 }
 
 .i-circle {
-  background-color: var(--accent-color);
+  background-color: var(--detail-color);
   width: 40px;
   height: 40px;
   display: flex;
@@ -313,7 +316,7 @@ p {
   text-align: center;
   padding: 10px 0px;
   margin-bottom: 20px;
-  color: #fff;
+  color: var(--font-color);
 }
 
 .projects-title > p {
@@ -321,7 +324,7 @@ p {
   text-align: center;
   margin-bottom: 40px;
   font-size: 24px;
-  color: #fff;
+  color: var(--font-color);
 }
 
 .project-wrapper {
@@ -357,7 +360,7 @@ p {
   font-size: 20px;
   margin-top: 10px;
   padding: 10px;
-  background-color: var(--secondary-color);
+  background-color: var(--detail-color);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -367,7 +370,7 @@ p {
 }
 
 .code a {
-  color: #fff;
+  color: var(--font-color);
 }
 
 /* .code a:hover {
@@ -412,7 +415,7 @@ p {
 }
 
 .project-card span {
-  background: var(--secondary-color);
+  background: var(--detail-color);
   padding: 5px 10px;
   margin: 5px 10px;
   border-radius: 15px;
@@ -437,13 +440,13 @@ p {
 
 .content-wrapper > h2 {
   font-size: clamp(32px, 3vw, 1.2rem);
-  color: #fff;
+  color: var(--font-color);
   margin-top: 0;
 }
 
 .content-wrapper > p {
   font-size: 24px;
-  color: #fff;
+  color: var(--font-color);
 }
 
 .form-wrapper {
@@ -468,7 +471,8 @@ form {
 label {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #fff;
+  font-family: var(--secondary-font);
+  color: var(--font-color);
 }
 
 input {
@@ -488,10 +492,12 @@ textarea {
   height: 150px;
   margin-bottom: 30px;
   width: 80%;
+  font-size: 20px;
+  font-family: var(--secondary-font);
 }
 
 .submit {
-  background-color: var(--secondary-color);
+  background-color: var(--detail-color);
   color: #fff;
   height: 50px;
   padding: 10px;
@@ -511,7 +517,7 @@ textarea {
   justify-content: center;
   width: 50%;
   gap: 20px;
-  color: #fff;
+  color: var(--font-color);
 }
 
 .my-email,
@@ -525,7 +531,8 @@ textarea {
 }
 
 .contact-i {
-  background-color: var(--secondary-color);
+  background-color: var(--detail-color);
+  color: #fff;
   width: 60px;
   height: 60px;
   display: flex;
@@ -585,7 +592,7 @@ textarea {
   }
 }
 
-svg {
+/* svg {
   position: fixed;
   top: 0;
   left: 0;
@@ -600,7 +607,7 @@ svg {
     #000102
   );
   z-index: -100;
-}
+} */
 
 .fade-in {
   opacity: 0;

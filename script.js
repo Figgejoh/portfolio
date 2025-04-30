@@ -10,9 +10,9 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-document.addEventListener("scroll", () => {
-  header.style.opacity = (100 / window.scrollY) * rate;
-});
+// document.addEventListener("scroll", () => {
+//   header.style.opacity = (100 / window.scrollY) * rate;
+// });
 
 const appearOptions = {
   threshold: 1,
