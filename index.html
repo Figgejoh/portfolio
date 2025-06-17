@@ -14,13 +14,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-    <script async src="script.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
     <title>Portfolio</title>
   </head>
   <body>
@@ -36,11 +33,11 @@
           focusing on building responsive websites.
         </p>
         <div class="hero-btns">
-          <button class="view-work" type="button">View My Work</button>
-          <button class="contact-me" type="button">Contact Me</button>
+          <button class="view-work" aria-label="Scroll to projects">View My Work</button>
+          <button class="contact-me" aria-label="Scroll to contact section">Contact Me</button>
         </div>
       </div>
-      <i class="fa-solid fa-chevron-down" role="button"></i>
+      <i class="fa-solid fa-chevron-down" role="button" aria-label="Scroll to project section" tabindex="0"></i>
     </main>
 
     <section class="projects">
@@ -55,7 +52,7 @@
         <div class="project-grid">
           <article class="project-card">
             <div class="image-container" >
-              <img src="img/recipefinderimg.png" alt="a screen shot taking of the landing page for my recipe finder webapp" />
+              <img src="img/recipefinderimg.png" loading="lazy" alt="a screen shot taken of the landing page for my recipe finder webapp" />
               <div class="overlay-text">
                 <h3>Recipe Finder</h3>
                 <div class="tech">
@@ -67,24 +64,25 @@
             </div>
             <div class="card-content">
               <p>
-              Recipe Finder är en webbaserad applikation byggd med HTML, CSS och JavaScript. 
-              Projektet använder en extern API-call för att hämta recept baserat på användarens sökord. 
-              Fokus ligger på responsiv design och en användarvänlig gränssnitt som gör det enkelt att 
-              hitta och utforska olika maträtter.
+                  Recipe Finder is a web-based application built with HTML, CSS, and JavaScript. 
+                  It uses an external API to fetch recipes based on the user's search query. 
+                  The focus is on responsive design and a user-friendly interface that makes it easy 
+                  to search for and explore different dishes.
               </p>
               <div class="card-links">
                 <div class="card-bottom-left">
-                <a href="https://github.com/Figgejoh/recipefinder" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                  <a href="https://github.com/Figgejoh/recipefinder" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                  <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a> -->
                 </div>
                 <div class="card-bottom-right">
-                <a href="#" class="details-link">View Details</a>
+                    <a href="#" class="details-link" aria-label="View details about Recipe Finder project">View Details</a>
+                </div>
               </div>
             </div>
           </article>
           <article class="project-card">
             <div class="image-container">
-              <img src="img/quizappimg.jpg" alt="screen shot of the first question when starting my quiz" />
+              <img src="img/quizappimg.jpg" loading="lazy" alt="screen shot of the first question when starting my quiz" />
               <div class="overlay-text">
                 <h3>Quiz App</h3>
                 <div class="tech">
@@ -96,24 +94,24 @@
             </div>
             <div class="card-content">
               <p>
-              Quiz App är en enkel men interaktiv frågesport byggd med HTML, CSS och JavaScript. 
-              Användaren besvarar flervalsfrågor under en nedräkningstimer, och i slutet visas resultatet.
-               Appen tränar både snabbhet och kunskap i en snygg och responsiv layout.
-               Fortsatt arbete på denna kommer.
+                  Quiz App is a simple yet interactive quiz built with HTML, CSS, and JavaScript. 
+                  The user answers multiple-choice questions under a countdown timer, and the result is displayed at the end. 
+                  The app helps train both speed and knowledge, with a clean and responsive layout. 
+                  Further development is planned.
               </p>
               <div class="card-links">
                 <div class="card-bottom-left">
-                <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                <a href="https://github.com/Figgejoh/quizapp" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a> -->
                 </div>
                 <div class="card-bottom-right">
-                <a href="#" class="details-link">View Details</a>
+                <a href="#" class="details-link" aria-label="View details on Quiz App project">View Details</a>
               </div>
             </div>
           </article>
           <article class="project-card">
             <div class="image-container" >
-              <img src="img/resonancestudios.png" alt="a screen shot of the landing page for my music studio website"/>
+              <img src="img/resonancestudios.png" loading="lazy" alt="a screen shot of the landing page for my music studio website"/>
               <div class="overlay-text">
                 <h3>Resonance Studios</h3>
                 <div class="tech">
@@ -125,24 +123,23 @@
             </div>
             <div class="card-content">
               <p>
-              Resonance Studios är en responsiv webbplats för en musikstudio, 
-              designad för att fungera sömlöst på alla enheter. Sidan har en modern layout med interaktiva
-              inslag byggda i JavaScript, såsom dynamisk navigering, animerade element och en smidig
-              användarupplevelse.
+            Resonance Studios is a responsive website for a music studio, 
+            designed to work seamlessly across all devices. The site features a modern layout with interactive 
+            JavaScript elements, such as dynamic navigation, animated components, and a smooth user experience.
               </p>
               <div class="card-links">
                 <div class="card-bottom-left">
                 <a href="https://github.com/Figgejoh/resonance-studios" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a> -->
                 </div>
                 <div class="card-bottom-right">
-                <a href="#" class="details-link">View Details</a>
+                <a href="#" class="details-link" aria-label="View details on Resonance Studios project">View Details</a>
               </div>
             </div>
           </article>
           <article class="project-card">
             <div class="image-container" >
-              <img src="img/vetai.png" alt="a screen shot for a made up company using AI to ensure better health for animals" />
+              <img src="img/vetai.png" loading="lazy" alt="a screen shot for a made up company using AI to ensure better health for animals" />
               <div class="overlay-text">
                 <h3>VetAI</h3>
                 <div class="tech">
@@ -154,23 +151,48 @@
             </div>
             <div class="card-content">
               <p>
-             Webbplatsen för vetAi är byggd med responsiv design som anpassar sig smidigt till alla skärmstorlekar,
-              från mobil till dator. Layouten skalar automatiskt om, 
-              menyer byter form för att vara lättnavigerade på små skärmar, 
-              och innehållet förblir läsbart och tillgängligt. JavaScript används för interaktiv funktionalitet.
+                The VetAI website is built with a responsive design that adapts smoothly to all screen sizes, 
+                from mobile to desktop. The layout automatically scales, 
+                menus transform for better navigation on smaller screens, 
+                and content remains readable and accessible. JavaScript is used for interactive functionality.
               </p>
               <div class="card-links">
                 <div class="card-bottom-left">
-                <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                <a href="https://github.com/Figgejoh/vetAI" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a> -->
                 </div>
                 <div class="card-bottom-right">
-                <a href="#" class="details-link">View Details</a>
+                <a href="#" class="details-link" aria-label="View details on VetAI project">View Details</a>
                 </div>
             </div>
           </article>
         </div>
       </div>
+      <div class="contact-box">
+        <h3>Do you want to know more? Feel free to contact me. </h3>
+        <button class="contact-me-bottom">Contact Me</button>
+      </div>
     </section>
+    <div class="popup">
+      <div class="modal">
+        <div class="modal-left">
+          <img src="/img/jag1.jpg">
+        </div>
+        <div class="modal-right">
+          <i class="fa-solid fa-xmark close-modal"></i>
+          <form class="contact-form" action="https://formspree.io/f/xblykrwl" method="POST">
+            <label for="name" >Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required placeholder="Your email">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Write a message..."></textarea>
+
+            <button type="submit" class="send-message">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  
   </body>
 </html>

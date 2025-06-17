@@ -5,13 +5,13 @@
 }
 
 :root {
-  --heading-font: "Rowdies", sans-serif;
+  --heading-font: "Inter", sans-serif;
   --body-font: "Rubik", sans-serif;
   --black: #111111;
   --gray: #2f2f2f;
   --white: #f6f6f6;
   --bg-color: #253c3c;
-  --padding-section-side: 90px;
+  --padding-section-side: 30px;
   --indigo: #1a237e;
   --purple: #4b1c7d;
   --gradient-bg: linear-gradient(
@@ -117,7 +117,9 @@ h6,
   font-size: 1.2rem;
 }
 
-.hero button:hover {
+.hero button:hover,
+.contact-me-bottom:hover,
+.send-message:hover {
   background-color: var(--gray);
   color: var(--white);
 
@@ -186,9 +188,15 @@ h6,
   cursor: pointer;
 }
 
+.fa-chevron-down:active {
+  color: var(--indigo);
+}
+
 .projects {
-  padding: var(--padding-section-side);
   background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-content {
@@ -210,12 +218,13 @@ h6,
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 70%;
+  max-width: 60%;
   gap: 20px;
 }
 
 .project-card {
   border-radius: 12px;
+  opacity: 0;
   width: 100%;
   max-height: 500px;
   overflow: hidden;
@@ -224,6 +233,29 @@ h6,
   flex-direction: column;
   gap: 20px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
+  will-change: transform, opacity;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.project-card:nth-child(1) {
+  transform: rotate(30deg) scale(0.4);
+}
+
+.project-card:nth-child(2) {
+  transform: rotate(-30deg) scale(0.4);
+}
+
+.project-card:nth-child(3) {
+  transform: rotate(-30deg) scale(0.4);
+}
+
+.project-card:nth-child(4) {
+  transform: rotate(30deg) scale(0.4);
+}
+
+.project-card.show {
+  transform: rotate(0) scale(1);
+  opacity: 1;
 }
 
 .image-container {
@@ -235,6 +267,7 @@ h6,
   width: 100%;
   display: block;
   transition: transform 0.3s ease;
+  height: 100%;
 }
 
 .overlay-text {
@@ -268,6 +301,7 @@ h6,
 
 .image-container:hover img {
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .image-container:hover .overlay-text {
@@ -331,4 +365,138 @@ h6,
 
 .card-content {
   padding: 20px;
+}
+
+.contact-box {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  height: 200px;
+  font-size: 24px;
+  font-family: var(--heading-font);
+  background: var(--gradient-bg);
+  color: var(--white);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.contact-me-bottom {
+  padding: 10px 10px;
+  max-width: 70%;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: var(--body-font);
+  background: var(--white);
+  color: #000;
+  cursor: pointer;
+}
+
+.popup {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(40px);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  width: 900px;
+  padding: var(--padding-section-side);
+  border-radius: 8px;
+  background: var(--gradient-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-left,
+.modal-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-left img {
+  object-fit: cover;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
+
+.modal-right {
+  display: flex;
+  padding: 20px 10px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+label {
+  font-family: var(--body-font);
+  color: white;
+  font-size: 1.2rem;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+.send-message {
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.fa-xmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 2rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.fa-xmark:active {
+  transform: scale(1.02);
 }
